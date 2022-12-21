@@ -38,6 +38,11 @@ public class WhileLoop {
 
 //        code here
 
+        while (i < end) {
+            sum += i; 
+            i += 1; 
+        }
+
         return sum;
     }
 }
