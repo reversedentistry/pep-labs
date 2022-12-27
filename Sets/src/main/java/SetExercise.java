@@ -1,4 +1,5 @@
 
+import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -20,7 +21,8 @@ public class SetExercise {
      * @return a new Set<Integer> object.
      */
     public Set<Integer> createSet(){
-        return null;
+        HashSet<Integer> newSet = new HashSet<Integer>;
+        return newSet;
     }
 
     /**
