@@ -14,13 +14,11 @@ public class DoesNotContain {
      */
     public boolean arrayDoesNotContain(int[] arr, int target){
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] != target) {
-                continue; 
-            } else {
-                return true; 
-            }
+            if (arr[i] == target) {
+                return false;  
+            } 
         }
         
-        return false;
+        return true;
     }
 }
