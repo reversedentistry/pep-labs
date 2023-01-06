@@ -11,16 +11,17 @@ public class JavalinSingleton {
      * 
      * Note: Please refer to the "CreatingEndpoints.MD" file for more assistance if needed.
      */
-    public static Javalin getInstance(){
+    // public static Javalin getInstance(){
+    public static String main(String[] args) {
         Javalin app = Javalin.create(); 
         
         //write endpoint here
-        app.start(9000); 
+        app.start(9001); 
         app.get("/hello", ctx -> {
             ctx.result("Hello World"); 
         }); 
 
-        return app;
+       return "Hello World"; 
     }
     
 }
