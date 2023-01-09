@@ -19,14 +19,14 @@ public class IsSorted {
 
         // return true;
         if (arr[0] > arr[1]) {
-            // descending order
+            
             for (int i = 1; i < arr.length; i++) {
                if (arr[i - 1] < arr[i]) {
                   return false;
                }
             }
          } else {
-            // ascending order
+            
             for (int i = 1; i < arr.length; i++) {
                if (arr[i - 1] > arr[i]) {
                   return false;
