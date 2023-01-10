@@ -21,6 +21,8 @@ public class FlightDAO {
 
 
 
+    private static final Flight flight = null;
+
     /**
      * TODO: Retrieve all flights from the flight table.
      *
@@ -81,7 +83,7 @@ public class FlightDAO {
         }catch(SQLException e){
             System.out.println(e.getMessage());
         }
-        return null;
+        return flight;
     }
 
     /**
@@ -148,7 +150,7 @@ public class FlightDAO {
         Connection connection = ConnectionUtil.getConnection();
         try {
             //Write SQL logic here
-            String sql = "UPDATE flight SET departure_city = ?, arrival_city = ? WHERE flight_id = ?";
+            String sql = "";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
             //write PreparedStatement setString and setInt methods here.
@@ -160,7 +162,7 @@ public class FlightDAO {
         }catch(SQLException e){
             System.out.println(e.getMessage());
         }
-        return flight;
+        return null;
     }
 
     /**
