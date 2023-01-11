@@ -1,3 +1,3 @@
-CREATE TABLE post (id SERIAL PRIMARY KEY, post VARCHAR(255), user_fk INT REFERENCES "User"(id)); 
+CREATE TABLE post (id SERIAL PRIMARY KEY, post VARCHAR(255), user_fk INT REFERENCES post(id)); 
 
 
