@@ -113,10 +113,11 @@ public class BookDAO {
         List<Book> books = new ArrayList<>();
         try {
             //Write SQL logic here
-            String sql = "SELECT * FROM book WHERE copies_available > 0";
+            String sql = "SELECT * FROM book WHERE copies_available > ?";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
             //write preparedStatement's setInt method here.
+            preparedStatement.setInt(1, 0); 
 
             ResultSet rs = preparedStatement.executeQuery();
             while(rs.next()){
