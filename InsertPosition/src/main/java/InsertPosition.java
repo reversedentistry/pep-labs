@@ -29,6 +29,6 @@ public class InsertPosition {
             }
         }
         
-        return nums.length+1;
+        return nums.length;
     }
 }
