@@ -16,10 +16,10 @@ public class CharComparison {
         for (int i = 0; i < a.length; i++) {
             if (Arrays.compare(a, b) == 0) {
                 return 0; 
-            } else if (Character.compare(a[i], b[i]) > 0) {
-                return 1; 
-            } else {
+            } else if (Character.compare(a[i], b[i]) < 0) {
                 return -1; 
+            } else {
+                return 1; 
             }
         }
         
