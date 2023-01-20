@@ -12,28 +12,43 @@ public class MostCommonCharacter {
     public char recurringChar(String str) {
         Map<Character, Integer> occurrences = new HashMap<>(); 
         int maxOccurring = 0; 
-        char maxOccurringCh = ' '; 
+        char maxOccurringCh = 0; 
+
+        // for (int i = 0; i < str.length(); i++) {
+        //     char ch = str.charAt(i); 
+
+        //     if (occurrences.containsKey(ch)) {
+        //         occurrences.put(ch, occurrences.get(ch) + 1); 
+        //         if (occurrences.get(ch) > maxOccurring) {
+        //             maxOccurring = occurrences.get(ch); 
+        //         }
+        //     } else {
+        //         occurrences.put(ch, 1); 
+        //     }; 
+
+        //     // if (occurrences.get(ch) > maxOccurring) {
+        //     //     maxOccurring = occurrences.get(ch); 
+        //     // }
+        // }; 
+
+        
 
         for (int i = 0; i < str.length(); i++) {
-            char ch = str.charAt(i); 
-
-            if (occurrences.containsKey(ch)) {
-                occurrences.put(ch, occurrences.get(ch) + 1); 
+            char c = str.charAt(i); 
+            Integer val = occurrences.get(c); 
+            if (val != null) {
+                occurrences.put(c, val+1); 
             } else {
-                occurrences.put(ch, 1); 
-            }; 
-
-            if (occurrences.get(ch) > maxOccurring) {
-                maxOccurring = occurrences.get(ch); 
+                occurrences.put(c, 1); 
             }
         }; 
-
+        
         for (Map.Entry<Character, Integer> occurrence : occurrences.entrySet()) {
-            if (occurrence.getValue() == maxOccurring) {
+            if (occurrence.getValue() > maxOccurring) {
+                maxOccurring = occurrence.getValue(); 
                 maxOccurringCh = occurrence.getKey(); 
             }
         }
-        
         return maxOccurringCh;
     }
 }
