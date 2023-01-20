@@ -16,7 +16,8 @@ public class SubArray {
         int[] subArray = new int[end - start]; 
 
         for (int i = 0; i < subArray.length; i++) {
-            subArray[i] = nums[i]; 
+            subArray[i] = nums[start]; 
+            start++; 
         }
         
         return subArray;
